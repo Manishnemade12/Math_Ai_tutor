@@ -1,0 +1,100 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 11%;
+    --foreground: 240 10% 95%;
+
+    --card: 260 30% 15%;
+    --card-foreground: 240 10% 95%;
+
+    --popover: 260 30% 15%;
+    --popover-foreground: 240 10% 95%;
+
+    --primary: 260 84% 70%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 40% 25%;
+    --secondary-foreground: 240 10% 95%;
+
+    --muted: 260 20% 20%;
+    --muted-foreground: 240 5% 75%;
+
+    --accent: 260 50% 30%;
+    --accent-foreground: 240 10% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 260 30% 26%;
+    --input: 260 30% 26%;
+    --ring: 260 84% 70%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 25% 11%;
+    --sidebar-foreground: 240 10% 95%;
+    --sidebar-primary: 260 84% 70%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 50% 30%;
+    --sidebar-accent-foreground: 240 10% 95%;
+    --sidebar-border: 260 30% 26%;
+    --sidebar-ring: 260 84% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.geometric-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.15;
+  filter: blur(4px);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 4px;
+}
+
+.triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.ai-model-container {
+  width: 100%;
+  height: 280px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.conversation-container {
+  height: calc(100vh - 400px);
+  min-height: 200px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
