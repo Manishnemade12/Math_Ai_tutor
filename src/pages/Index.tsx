@@ -260,14 +260,14 @@ const Index = () => {
         </div>
 
         <div className="flex gap-2 items-center">
-          <Button
+          {/* <Button
             variant="outline"
             size="icon"
             onClick={handleNewConversation}
             title="New Conversation"
           >
             <Plus className="h-4 w-4" />
-          </Button>
+          </Button> */}
 
           <Link to="/quizz">
             <Button

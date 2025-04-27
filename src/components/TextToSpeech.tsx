@@ -8,6 +8,7 @@ interface TextToSpeechProps {
   onStopSpeaking?: () => void;
 }
 
+
 const TextToSpeech: React.FC<TextToSpeechProps> = ({ 
   text, 
   onStartSpeaking, 

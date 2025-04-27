@@ -94,6 +94,7 @@ const UserProfile = () => {
                   value={photoUrl}
                   onChange={(e) => setPhotoUrl(e.target.value)}
                   placeholder="https://example.com/avatar.jpg"
+                  //links of images
                 />
               </div>
               

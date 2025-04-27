@@ -55,7 +55,25 @@ const ConversationSidebar: React.FC<ConversationSidebarProps> = ({ onConversatio
       setIsLoading(false);
     }
   };
-
+  // const handleRenameConversation = (id: string, newTitle: string) => {
+  //   if (!user) return;
+    
+  //   try {
+  //     const updatedConversations = conversations.map(conversation => 
+  //       conversation.id === id ? { ...conversation, title: newTitle } : conversation
+  //     );
+  //     setConversations(updatedConversations);
+  //     toast({
+  //       title: "Conversation renamed",
+  //     });
+  //   } catch (error) {
+  //     toast({
+  //       title: "Error",
+  //       description: "Failed to rename conversation",
+  //       variant: "destructive",
+  //     });
+  //   }
+  // };
   const handleDeleteConversation = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
     if (!user) return;

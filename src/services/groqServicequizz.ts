@@ -9,6 +9,7 @@ export interface Question {
   explanation?: string;
 }
 
+
 export interface Quiz {
   title: string;
   description: string;

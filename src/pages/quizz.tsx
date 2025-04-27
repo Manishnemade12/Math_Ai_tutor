@@ -159,6 +159,7 @@ const Quizz = () => {
             onRetry={handleRetryQuiz}
             onNewQuiz={handleNewQuiz}
             timeTaken={timeTaken}
+            
           />
         )}
       </div>

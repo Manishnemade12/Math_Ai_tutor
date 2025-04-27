@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Loader2 } from 'lucide-react';
 
+
 export interface Message {
   id: string;
   type: 'user' | 'assistant';

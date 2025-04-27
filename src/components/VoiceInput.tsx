@@ -119,6 +119,7 @@ const VoiceInput: React.FC<VoiceInputProps> = ({ onTranscript, isProcessing }) =
       ) : (
         <Mic className="h-4 w-4" />
       )}
+      
       {isListening && (
         <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full animate-ping" />
       )}

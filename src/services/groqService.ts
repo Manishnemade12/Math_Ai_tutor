@@ -1,4 +1,3 @@
-
 import { createWorker } from 'tesseract.js';
 
 export interface GroqAPIResponse {

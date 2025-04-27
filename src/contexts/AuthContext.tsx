@@ -112,7 +112,9 @@ export const AuthProvider: React.FC<{children: React.ReactNode}> = ({ children }
     }
   };
 
-  // Logout function
+  // Mock logout function
+  // In a real app, this would also invalidate the session on the backend
+  // Logout function to clear user data and remove from local storage
   const logout = () => {
     setUser(null);
     localStorage.removeItem(USER_STORAGE_KEY);
