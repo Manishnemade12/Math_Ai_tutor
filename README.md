@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# 🤖 AI-Powered Math Learning & Quiz Web App (with GROQ API)
 
-## Project info
+An intelligent and interactive **Math Learning Platform** powered by **GROQ AI**, designed to help users explore math concepts, solve problems step-by-step, generate quizzes, and learn visually and vocally — all in one place.
 
-**URL**: https://lovable.dev/projects/751a57f2-2876-463e-b417-b9054a191716
+---
 
-## How can I edit this code?
+## 🚀 Features
 
-There are several ways of editing your application.
+### 📘 1. Topic-Wise Explanation (Chapter-Wise)
+- Separate sections for Algebra, Geometry, Trigonometry, Calculus, etc.
+- GROQ-generated topic breakdowns with real-world examples.
 
-**Use Lovable**
+> 🧠 Prompt: `Explain the concept of integration with a real-life example.`
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/751a57f2-2876-463e-b417-b9054a191716) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🧮 2. Step-by-Step Problem Solver
+- Type an equation like: `2x + 3 = 9`
+- Get a full solution with steps via GROQ.
 
-**Use your preferred IDE**
+> 🧠 Prompt: `Solve this equation step by step: 2x + 3 = 9`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🎙️ 3. Voice Input & Output
+- Speak your math problem and hear the answer back.
+- Converts voice to text → Sends to GROQ → Speaks the result using TTS.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### ✍️ 4. LaTeX Math Renderer
+- All results are rendered beautifully using LaTeX.
+- Supports equations, fractions, square roots, integrals, etc.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📚 5. Practice Questions Generator
+- Ask: `Give me 5 questions on trigonometry`
+- Instantly get random questions with/without answers or hints.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+### 🖼️ 6. Doubt Solver with Image Upload
+- Upload your handwritten question.
+- OCR extracts text and sends it to GROQ for answers.
+
+---
+
+### 🧪 7. Quiz Mode with Timer
+- Choose topic, difficulty, number of questions.
+- GROQ generates quiz with a timer.
+- Shows score, correct answers, and explanations.
+
+---
+
+### 📆 8. Daily Math Challenge
+- New math puzzle or riddle every day.
+- Perfect for quick brain workouts.
+
+---
+
+### 🗣️ 9. Natural Language to Formula
+- Speak/type: `What is the area of a circle with radius 7?`
+- Auto-formulated, solved, and explained.
+
+---
+
+### 📌 10. Chat History & Bookmarking
+- Auto-save asked questions and solutions.
+- Bookmark key explanations for later.
+
+---
+
+## 🧠 Powered by GROQ
+
+API Key (example):  
+
+An intelligent and interactive **Math Learning Platform** powered by **GROQ AI**, designed to help users explore math concepts, solve problems step-by-step, generate quizzes, and learn visually and vocally — all in one place.
+
+--
+
+
+# Authentication Flow
+
+```mermaid
+flowchart TD
+    A["User Visits Webpage"] --> B["Check Auth State"]
+    B --> C{"Is User Logged In?"}
+    C -->|No| D["Show Login/Signup Form"]
+    D --> E["User Enters Credentials"]
+    E --> F["Supabase Auth Request"]
+    F --> G{"Valid Credentials?"}
+    G -->|No| H["Show Error Message"]
+    H --> D
+    G -->|Yes| I["Create Session"]
+    I --> J["Store Auth Token"]
+    J --> K["Redirect to Protected Page"]
+    C -->|Yes| K
+    K --> L["Make Authenticated API Calls"]
+    L --> M{"Token Valid?"}
+    M -->|Yes| N["Return Protected Data"]
+    M -->|No| O["Refresh Token"]
+    O --> P{"Refresh Successful?"}
+    P -->|Yes| L
+    P -->|No| Q["Logout User"]
+    Q --> D
 ```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
 
-**Use GitHub Codespaces**
+# System Working Flow 
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+```mermaid
+flowchart TD
+    A["Frontend"] --> B["API Routes"]
+    B --> B1["/"]
+    B --> B2["/api/solve"]
+    B --> B3["/api/explain"]
+    B --> C["GROQ API (AI)\n🧠 gsk_... token"]
+    D["OCR / Voice / UI\nImage → Text\nSpeech ↔ Text"] --> C
+    
+    style A fill:#4CAF50,stroke:#2E7D32,stroke-width:2px
+    style B fill:#2196F3,stroke:#1565C0,stroke-width:2px
+    style C fill:#FF9800,stroke:#F57C00,stroke-width:2px
+    style D fill:#9C27B0,stroke:#7B1FA2,stroke-width:2px
+```
 
-This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/751a57f2-2876-463e-b417-b9054a191716) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
