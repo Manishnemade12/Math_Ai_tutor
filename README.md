@@ -4,6 +4,8 @@ An intelligent and interactive **Math Learning Platform** powered by **GROQ AI**
 
 ---
 
+<img src="https://res.cloudinary.com/do0jgbkjz/image/upload/v1748281651/vbm-admin/file_1748281651517.jpg" alt="Hackathon Image" width="600" height="350"/>
+
 ## 🚀 Features
 
 ### 📘 1. Topic-Wise Explanation (Chapter-Wise)
